@@ -42,3 +42,27 @@ http://localhost:3000
 ```
 
 to see homepage :)
+
+## FAQ
+
+#### How to add a private route?
+
+go to `src/App.js` and find the Route with `PrivateRoute` element. you can add your private route inside that Route.
+
+#### How to add a new svg icon as React Component?
+
+first download your svg icon from zeplin or any other source. then put it in `src/assets/icons` folder. now open a new command line inside the project folder and run:
+
+```
+yarn svgr
+```
+
+by doing this, the newly created icon will be in the `src/components/icons` folder. open the new icon with your editor and add some props (className, width, height, color, ...) you can use it like this:
+
+```jsx
+import { TrashIcon } from "../components/icons";
+
+const SomePage = () => {
+  return <TrashIcon width={16} height={16} color="#e3e3e3" />;
+};
+```
