@@ -1,6 +1,6 @@
 # cra-structure
 
-This is a simple project structure based on create-react-app for Produpt Studio dev team.
+This is a simple project structure based on `create-react-app` for Produpt Studio dev team.
 
 ## Features
 
@@ -29,4 +29,16 @@ This is a simple project structure based on create-react-app for Produpt Studio 
 
 ## Usage
 
-clone this repo and run `yarn start`
+simply clone this repo and run:
+
+```
+yarn start
+```
+
+then on your browser go to:
+
+```
+http://localhost:3000
+```
+
+to see homepage :)
