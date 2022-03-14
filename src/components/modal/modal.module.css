@@ -1,0 +1,25 @@
+.backdrop {
+  @apply fixed inset-0 bg-[rgba(0,_0,_0,_0.25)];
+  @apply opacity-0 transition duration-100 delay-200;
+  @apply flex justify-center items-start z-1000;
+  @apply backdrop-blur-sm pt-[15vmin];
+}
+
+.backdropActive {
+  @apply duration-250 delay-0 opacity-100;
+}
+
+.box {
+  @apply bg-white relative rounded-3xl;
+  @apply transform translate-y-24 transition-all duration-200 opacity-0;
+  @apply w-[clamp(40%,_39rem,_90%)] py-12 px-12 max-h-[90%];
+  @apply flex flex-col relative overflow-hidden;
+}
+
+.boxActive {
+  @apply translate-y-0 opacity-100 delay-150 duration-350;
+}
+
+.close {
+  @apply absolute top-8 right-8;
+}

@@ -1,0 +1,4 @@
+.wrapper {
+  @apply fixed z-1000 inset-0 bg-[rgba(0,_0,_0,_0.25)];
+  @apply flex justify-center items-center no-select;
+}

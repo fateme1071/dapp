@@ -1,0 +1,9 @@
+.root {
+  @apply text-[#008ccd] border-2 border-[#008ccd] rounded-lg px-4 py-2;
+  @apply transition hover:bg-[#008ccd] hover:text-white;
+  @apply flex items-center justify-center;
+}
+
+.root:hover > svg {
+  @apply !text-white;
+}
