@@ -32,6 +32,12 @@ This is a simple project structure based on `create-react-app` for Produpt Studi
 simply clone this repo and run:
 
 ```
+yarn
+```
+
+after installing all dependencies, run:
+
+```
 yarn start
 ```
 
