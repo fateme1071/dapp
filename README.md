@@ -41,7 +41,7 @@ then on your browser go to:
 http://localhost:3000
 ```
 
-to see homepage :)
+to see homepage.
 
 ## FAQ
 
@@ -66,3 +66,15 @@ const SomePage = () => {
   return <TrashIcon width={16} height={16} color="#e3e3e3" />;
 };
 ```
+
+#### How to change the `500` page UI?
+
+go to `src/components/errorFallback/errorFallback.jsx` and change the component as you like. the `resetErrorBoundary` prop will do a hard reload on the page. if you want to change this behavior go to `src/App.js` file and look at the `return` section.
+
+#### How to use the `Loading` component?
+
+go to `src/pages/home.jsx` to see the example.
+
+## Support
+
+For support, email pediii1373@gmail.com or contact me on whatsapp (+989058239363)
