@@ -1,22 +1,29 @@
 import axios from "axios";
-import React from "react";
+import React,{useContext, useEffect} from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { Loading } from "../components";
-
+import { Button } from "../components";
+import 'react-toastify/dist/ReactToastify.css';
+import {ConnectContext} from "../context/connectContext";
 const Home = () => {
-  const { isLoading } = useQuery(["users"], () =>
-    axios.get("https://reqres.in/api/users")
-  );
+  const {errorMessage,connButtonText,conectWalletHandler}=useContext(ConnectContext)
+  useEffect(()=>{
+    toast(errorMessage)
+  },[errorMessage])
+
   return (
     <>
-      <div className="p-4 flex flex-col items-start gap-4">
-        <h1 className="font-bold text-4xl">خانه</h1>
+      <div className="flex items-center justify-center bg-slate-800 h-screen">
+        {/* <h1 className="font-bold text-4xl">خانه</h1>
         <Link to="/login">لینک ورود</Link>
         <Link to="/components">کامپوننت ها</Link>
-        <Link to="/apis">seperate api files</Link>
+        <Link to="/apis">seperate api files</Link> */}
+        <Button onClick={()=>conectWalletHandler()}>{connButtonText }</Button>
+       
       </div>
-      <Loading show={isLoading} />
+     
     </>
   );
 };
