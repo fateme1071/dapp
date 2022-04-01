@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { NavigateSetter, ScrollToTop, ErrorFallback } from "./components";
 import { ToastContainer } from "react-toastify";
 import { ErrorBoundary } from "react-error-boundary";
+import ConnectContext from "./context/connectContext";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { retry: 1 } }
@@ -17,6 +18,7 @@ ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <ConnectContext>
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
           onReset={() => window.location.reload()}
@@ -26,6 +28,7 @@ ReactDOM.render(
           <App />
           <ToastContainer rtl newestOnTop />
         </ErrorBoundary>
+        </ConnectContext>
       </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>,
