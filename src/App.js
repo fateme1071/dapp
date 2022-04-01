@@ -4,17 +4,18 @@ import Private from "./pages/private";
 import Login from "./pages/login";
 import Private2 from "./pages/private2";
 import NotFound from "./pages/notFound";
-import Components from "./pages/components";
+import Profile from "./pages/profile";
 import Apis from "./pages/apis";
+import TokenPage from "./pages/tokenPage";
 
 function App() {
   return (
     <Routes>
       <Route path="*" element={<NotFound />} />
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/components" element={<Components />} />
-      <Route path="/apis" element={<Apis />} />
+      <Route path="/tokenPage" element={<TokenPage />} />
+      <Route path="/profile" element={<Profile />} />
+     
       <Route element={<PrivateRoute />}>
         <Route path="/private" element={<Private />} />
         <Route path="/private2" element={<Private2 />} />
